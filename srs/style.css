@@ -102,7 +102,7 @@ img {
 /* HERO WITH IMAGE + OVERLAY */
 .hero-section {
   min-height: 70vh;
-  background-image: var(--hero-url);
+  background: var(--hero-url) center/cover no-repeat;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
