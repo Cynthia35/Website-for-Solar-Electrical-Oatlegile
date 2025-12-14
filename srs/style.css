@@ -1,11 +1,6 @@
-/* =====================================================
-   STYLE.CSS — Solar & Electrical @ Oatlegile
-   Cleaned + Optimized + Responsive + Commented
-   ===================================================== */
-
-/* ------------------------------
-   GLOBAL RESET & BASE STYLES
--------------------------------- */
+/* =======================================================
+   GLOBAL RESET
+======================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +10,7 @@
 
 body {
   background: linear-gradient(135deg, #f4f7f6, #e9f4f3);
-  padding-top: 80px; /* adjust if navbar is taller or shorter */
+  padding-top: 80px;
   color: #333;
   line-height: 1.6;
   overflow-x: hidden;
@@ -27,162 +22,83 @@ h1, h2, h3, h4, h5 {
 
 img {
   max-width: 100%;
-  height: auto;
   display: block;
 }
 
-/* Link focus for accessibility */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 10px;
-  padding: 8px 12px;
-  background: #0f766e;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: 0.3s;
-  z-index: 999;
-}
-.skip-link:focus {
-  top: 10px;
-}
-
-/* ------------------------------
-   NAVBAR
--------------------------------- */
+/* =======================================================
+   PREMIUM NAVBAR WITH GRADIENT BRAND + SUN ICON
+======================================================= */
 .navbar {
-  background-color: #0f766e !important;
+  background: linear-gradient(90deg, #0f766e, #0c5f59) !important;
   padding: 0.8rem 1.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* Brand structure */
 .navbar-brand {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #fff !important;
-  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  text-decoration: none;
 }
 
+/* Animated sun icon */
+.brand-sun {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  transform-origin: center;
+  transition: transform .35s ease;
+}
+
+.navbar-brand:hover .brand-sun {
+  transform: rotate(18deg) scale(1.08);
+}
+
+/* Gradient text brand */
+.brand-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #0f766e, #ffd166);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Sub label */
+.brand-sub {
+  font-size: .7rem;
+  margin-top: -3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.9);
+}
+
+/* NAV LINKS */
 .nav-link {
-  color: #e4f7f5 !important;
-  font-weight: 500;
+  color: #ffffff !important;
+  font-weight: 600;
   text-transform: uppercase;
   margin-left: 1rem;
   position: relative;
 }
 
-/* Underline hover animation */
+/* gold underline hover */
 .nav-link::after {
   content: '';
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: #fff;
+  background-color: #ffd166;
   left: 0;
-  bottom: -5px;
+  bottom: -4px;
   transition: width 0.3s ease-in-out;
 }
+.nav-link:hover::after { width: 100%; }
 
-.nav-link:hover::after {
-  width: 100%;
-}
-/* =========================
-  Upgraded Navbar Brand
-   - gradient text
-   - animated sun
-   - responsive size
-   ========================= */
-
-.navbar-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: .6rem;
-  text-decoration: none;
-  cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  padding: .1rem .25rem;
-}
-
-/* SVG sun styling and animation */
-.brand-sun {
-  flex: 0 0 auto;
-  width: 36px;
-  height: 36px;
-  transform-origin: center;
-  transition: transform .32s ease;
-  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));
-}
-
-/* slow subtle spin on hover / focus for delight */
-.navbar-brand:hover .brand-sun,
-.navbar-brand:focus .brand-sun {
-  transform: rotate(18deg) scale(1.03);
-}
-
-/* Brand text container */
-.brand-text {
-  display: inline-flex;
-  flex-direction: column;
-  line-height: 1;
-  transform-origin: left center;
-}
-
-/* Main title (Oatlegile) – gradient text */
-.brand-title {
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  font-size: 1.35rem;
-  /* gradient */
-  background: linear-gradient(90deg, #0f766e 0%, #0c5f59 50%, #ffd166 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.02);
-  letter-spacing: .4px;
-}
-
-/* Secondary word (Energy) — smaller and uppercase */
-.brand-sub {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: .66rem;
-  color: rgba(255,255,255,0.95);
-  text-transform: uppercase;
-  margin-top: 2px;
-  letter-spacing: 1.4px;
-  opacity: 0.95;
-}
-
-/* Make sure navbar background gives contrast to gradient text */
-/* Adjust this to match your navbar colors if needed */
-.navbar {
-  background: linear-gradient(90deg, #0f766e, #0c5f59);
-}
-
-/* Slight hover lift for brand (polish) */
-.navbar-brand:hover .brand-title {
-  transform: translateY(-2px);
-  transition: transform .24s ease;
-}
-
-/* Responsive sizes */
-@media (max-width: 576px) {
-  .brand-sun { width: 30px; height: 30px; }
-  .brand-title { font-size: 1.05rem; }
-  .brand-sub { font-size: .6rem; }
-}
-
-/* Accessibility: ensure keyboard focus is visible */
-.navbar-brand:focus {
-  outline: 3px solid rgba(15,118,110,0.18);
-  border-radius: 6px;
-}
-
-
-/* ------------------------------
+/* =======================================================
    HERO SECTION
--------------------------------- */
+======================================================= */
 .hero-section {
   min-height: 65vh;
   background: var(--hero-url) center/cover no-repeat;
@@ -190,28 +106,25 @@ img {
   justify-content: center;
   align-items: center;
   padding: 4rem 1rem;
-  position: relative;
-  color: white;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .hero-section h1 {
   font-size: 3rem;
   font-weight: 700;
+  color: #0f766e;
 }
 
 .hero-section p {
   font-size: 1.2rem;
-  margin-top: 10px;
+  color: #0f766e;
 }
 
-/* ------------------------------
+/* =======================================================
    ABOUT SECTION
--------------------------------- */
+======================================================= */
 #about h2 {
   font-size: 2.4rem;
   color: #0f766e;
-  margin-bottom: 1rem;
 }
 
 #about p {
@@ -220,16 +133,16 @@ img {
   font-size: 1.1rem;
 }
 
-/* ------------------------------
-   SERVICES SECTION
--------------------------------- */
+/* =======================================================
+   SERVICES + CARDS
+======================================================= */
 .service-card {
   padding: 20px;
   background: white;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .service-card:hover {
@@ -238,37 +151,24 @@ img {
 }
 
 .service-card h3 {
-  margin-top: 15px;
-  font-size: 1.3rem;
   color: #0f766e;
+  margin-top: 15px;
 }
 
-/* Medium size Recent Projects images */
+/* =======================================================
+   RECENT PROJECTS
+======================================================= */
 .recent-container .pic img {
-  width: 100%;
-  max-width: 280px;   /* Medium size */
-  height: 200px;      /* Gives equal height */
+  max-width: 280px;
+  height: 200px;
   object-fit: cover;
   border-radius: 12px;
   margin: 0 auto;
-  display: block;
 }
 
-
-/* ------------------------------
-   SLIDESHOW SECTION
--------------------------------- */
-
-/* 2) Ensure gallery section headings are visible */
-section h2,
-.slideshow-container + h2,
-#gallery h2 {
-  color: #0f766e !important;     /* visible brand color */
-  margin-top: 1.5rem !important; /* push heading down from top */
-  font-size: 2rem;
-  text-align: center;
-  font-weight: 600;
-}
+/* =======================================================
+   SLIDESHOW
+======================================================= */
 .slideshow-container {
   display: flex;
   justify-content: center;
@@ -278,8 +178,8 @@ section h2,
 .slideshow {
   width: 400px;
   height: 300px;
-  position: relative;
   overflow: hidden;
+  position: relative;
 }
 
 .slideshow img {
@@ -287,43 +187,42 @@ section h2,
   height: 100%;
   object-fit: cover;
   position: absolute;
-  top: 0;
-  left: 0;
   opacity: 0;
-  transition: opacity 0.7s ease;
+  transition: opacity .7s ease;
 }
 
-.slideshow img.active {
-  opacity: 1;
+.slideshow img.active { opacity: 1; }
+
+section h2 {
+  color: #0f766e;
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
-/* ------------------------------
-   REVIEWS SECTION
--------------------------------- */
+/* =======================================================
+   REVIEWS CARDS
+======================================================= */
 .card {
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: .3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-/* ------------------------------
+/* =======================================================
    CONTACT FORM
--------------------------------- */
+======================================================= */
 .contact-main-fluid {
   display: flex;
   justify-content: center;
   padding: 40px;
   background: #f9fafb;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
 }
 
 form {
-  width: 100%;
   max-width: 600px;
   background: white;
   padding: 35px;
@@ -331,13 +230,9 @@ form {
   box-shadow: 0 8px 20px rgba(0,0,0,0.07);
 }
 
-form .input-box {
+.input-box {
   display: flex;
   gap: 20px;
-}
-
-.input-field {
-  flex: 1;
 }
 
 .item {
@@ -345,18 +240,11 @@ form .input-box {
   padding: 15px;
   border: 1.5px solid #ccc;
   border-radius: 8px;
-  transition: 0.3s;
 }
 
 .item:focus {
   border-color: #0f766e;
   box-shadow: 0 0 5px rgba(15,118,110,0.3);
-}
-
-.error-text {
-  color: #b50000;
-  display: none;
-  font-size: 0.9rem;
 }
 
 button[type="submit"] {
@@ -367,35 +255,31 @@ button[type="submit"] {
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
-  margin-top: 10px;
-  transition: background 0.3s ease;
 }
 
 button[type="submit"]:hover {
   background: #0c5f59;
 }
 
-/* ------------------------------
-   FAQ SECTION
--------------------------------- */
+/* =======================================================
+   FAQ
+======================================================= */
 .faqs-section {
   background: #f9fafb;
-  padding: 40px 30px;
+  padding: 40px;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .faq-question {
   width: 100%;
-  text-align: left;
   background: none;
   border: none;
-  padding: 15px 0;
   font-size: 1.1rem;
+  font-weight: 600;
+  color: #0f766e;
+  padding: 15px 0;
   cursor: pointer;
   position: relative;
-  color: #0f766e;
-  font-weight: 600;
 }
 
 .faq-question::after {
@@ -403,72 +287,40 @@ button[type="submit"]:hover {
   position: absolute;
   right: 0;
   font-size: 1.5rem;
-  transition: 0.3s;
+  transition: .3s;
 }
 
-.faq-question.active::after {
-  transform: rotate(45deg);
-}
+.faq-question.active::after { transform: rotate(45deg); }
 
 .faq-answer {
   display: none;
   padding: 0 0 15px 5px;
-  font-size: 1rem;
 }
 
-/* ------------------------------
+/* =======================================================
    FOOTER
--------------------------------- */
+======================================================= */
 footer {
-  background-color: #0f766e;
+  background: #0f766e;
   color: white;
   padding: 1rem;
   text-align: center;
   margin-top: 3rem;
 }
 
-/* ------------------------------
-   RESPONSIVE DESIGN
--------------------------------- */
+/* =======================================================
+   RESPONSIVE
+======================================================= */
 @media (max-width: 768px) {
-  .input-box {
-    flex-direction: column;
-  }
-
-  .slideshow {
-    width: 100%;
-    height: 250px;
-  }
-
-  .hero-section h1 {
-    font-size: 2.3rem;
-  }
-
-  .hero-section p {
-    font-size: 1.05rem;
-  }
+  .input-box { flex-direction: column; }
+  .slideshow { width: 100%; height: 250px; }
+  .hero-section h1 { font-size: 2.3rem; }
+  .hero-section p { font-size: 1rem; }
 }
 
-/* Large screens adjustments */
 @media (min-width: 1440px) {
-  .hero-section { max-width: 1200px; margin: 0 auto; }
-  section { max-width: 1200px; margin: 0 auto; }
-}
-
-/* Respect reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; animation: none !important; }
-}
-/* ===============================
-   FIX HERO HEADINGS COLOR
-   =============================== */
-
-.hero-section h1,
-.hero-section p,
-.service-header,
-.service-text,
-header h1,
-header p {
-  color: #0f766e !important;   /* brand green */
-  text-shadow: none !important; /* remove white blurry effect */
+  .hero-section, section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }
