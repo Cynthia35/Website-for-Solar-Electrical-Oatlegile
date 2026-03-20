@@ -1,113 +1,170 @@
 <!DOCTYPE html> 
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar and Electricity @ Oatlegile</title>
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-  <title>Solar Installation & Loadshedding Solutions Gauteng | Services</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
 
-  <meta name="description" content="Professional solar installation, inverter systems, and battery backup solutions in Gauteng. Reduce electricity costs and stay powered during loadshedding.">
+<script src="https://kit.fontawesome.com/2dd7f27d07.js" crossorigin="anonymous"></script>
 
-  <meta name="keywords" content="solar installation Gauteng, inverter installation, battery backup South Africa, loadshedding solutions Gauteng">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-  <meta name="robots" content="index, follow">
+<link rel="stylesheet" href="./srs/style.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
-  <script src="https://kit.fontawesome.com/2dd7f27d07.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="./srs/style.css">
 </head>
-
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+  
+ <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
   <div class="container-fluid">
+
+    <!-- Brand Logo -->
     <a class="navbar-brand" href="index.html">
-      <span><strong>Oatlegile Energy</strong></span>
+      <svg class="brand-sun" viewBox="0 0 24 24" fill="#ffd166">
+        <circle cx="12" cy="12" r="5"></circle>
+      </svg>
+
+      <span class="brand-text">
+        <span class="brand-title">Oatlegile</span>
+        <span class="brand-sub">Energy</span>
+      </span>
     </a>
+
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="slideshow.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+
+      </ul>
+    </div>
+
   </div>
 </nav>
 
-<header class="hero-section text-center d-flex align-items-center" 
-style="min-height: 60vh; background: url('./srs/Atlegang/System 1.jpeg') center/cover no-repeat;">
-  <div class="container">
-    <h1>Solar Installation & Loadshedding Solutions in Gauteng</h1>
-    <p>Reduce your electricity bill and stay powered with solar panels, inverters, and battery systems.</p>
-    <a href="contact.html" class="btn btn-success mt-3">Get Free Quote</a>
-  </div>
-</header>
 
-<main class="container my-5">
 
-<h2 class="text-center mb-4">Our Services in Gauteng</h2>
+  <!-- ======= Hero Section ======= -->
+  <header class="hero-section text-center d-flex align-items-center" 
+          style="min-height: 60vh; background: url('./srs/Atlegang/System 1.jpeg') center/cover no-repeat;">
+    <div class="container position-relative">
+      <h1 class="animate__animated animate__fadeInDown service-header" ><strong>Our Services</strong></h1>
+      <p class="animate__animated animate__fadeInUp animate__delay-1s service-text">
+        Powering your home and business with reliable solar and electrical solutions.
+      </p>
+    </div>
+  </header>
 
-<div class="row g-4">
+  <!-- ======= Services Section ======= -->
+  <main class="main-fluid my-5">
+    <div class="row g-4">
 
-<div class="col-md-6 col-lg-4">
-  <h3>Residential Solar Installation</h3>
-  <img src="./srs/Atlegang/Roof 2.jpg" alt="Residential solar installation Gauteng" class="img-fluid">
-  <p>We install solar panels for homes across Gauteng to help you reduce electricity costs and gain energy independence.</p>
-</div>
+      <!-- Residential Solar -->
+      <div class="col-md-6 col-lg-4">
+        <div class="main-content">
+          <h1>🏠 Residential Solar</h1>
+          <img src="./srs/Atlegang/Roof 2.jpg" alt="Residential Solar" class="img-fluid">
+          <p>
+            Power your home with clean, renewable energy and reduce electricity costs. 
+            Our expert team designs and installs solar systems tailored to your household needs, ensuring reliability and long-term savings.
+          </p>
+        </div>
+      </div>
 
-<div class="col-md-6 col-lg-4">
-  <h3>Commercial Solar Solutions</h3>
-  <img src="./srs/Atlegang/System 3.jpg" alt="Commercial solar systems Gauteng" class="img-fluid">
-  <p>Our business solar systems reduce operational costs and protect your company from loadshedding disruptions.</p>
-</div>
+      <!-- Commercial Solar -->
+      <div class="col-md-6 col-lg-4">
+        <div class="main-content-1">
+          <h1>🏢 Commercial Solar</h1>
+          <img src="./srs/Atlegang/System 3.jpg" alt="Commercial Solar" class="img-fluid">
+          <p>
+            Our commercial solar solutions are designed for businesses, factories, and offices seeking energy independence and cost savings.
+            We provide tailored installations that reduce operational expenses and improve sustainability.
+          </p>
+        </div>
+      </div>
 
-<div class="col-md-6 col-lg-4">
-  <h3>Inverter & Battery Backup Systems</h3>
-  <img src="./srs/Atlegang/Battery.jpg" alt="Inverter and battery backup Gauteng" class="img-fluid">
-  <p>Stay powered during loadshedding with reliable inverter and battery solutions for homes and businesses.</p>
-</div>
+      <!-- Backup Power Systems -->
+      <div class="col-md-6 col-lg-4">
+        <div class="main-content-2">
+          <h1>🧰 Backup Power Systems</h1>
+          <img src="./srs/Atlegang/Battery.jpg" alt="Backup Systems" class="img-fluid">
+          <p>
+            Stay powered during load-shedding with our inverter and battery solutions. 
+            We install backup power systems that ensure uninterrupted electricity for your home or business.
+          </p>
+        </div>
+      </div>
 
-<div class="col-md-6 col-lg-4">
-  <h3>Solar Maintenance & Repairs</h3>
-  <img src="./srs/solar maintenance.jpg" alt="Solar maintenance services Gauteng" class="img-fluid">
-  <p>Keep your system running efficiently with our cleaning, inspection, and repair services.</p>
-</div>
+      <!-- Solar Maintenance -->
+      <div class="col-md-6 col-lg-4">
+        <div class="main-content-3">
+          <h1>🔧 Solar Maintenance</h1>
+          <img src="./srs/solar maintenance.jpg" alt="Solar Maintenance" class="img-fluid">
+          <p>
+            We offer scheduled inspections, cleaning, repairs, and upgrades to keep your system running at peak performance and extend its life.
+          </p>
+        </div>
+      </div>
 
-<div class="col-md-6 col-lg-4">
-  <h3>Electrical Installations</h3>
-  <img src="./srs/Electrical pictures.jpg" alt="Electrical installations Gauteng" class="img-fluid">
-  <p>We provide safe and certified electrical installations including wiring, lighting, and DB upgrades.</p>
-</div>
+      <!-- Electrical Installations -->
+      <div class="col-md-6 col-lg-4">
+        <div class="main-content-4">
+          <h1>💡 Electrical Installations</h1>
+          <img src="./srs/Electrical pictures.jpg" alt="Electrical Installations" class="img-fluid">
+          <p>
+            Our certified electricians handle all types of electrical work—new buildings, rewiring, and DB board upgrades. 
+            We ensure every installation meets safety standards and delivers reliable performance.
+          </p>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <!-- ======= Recent Projects ======= -->
+    <section class="my-5">
+      <h2 class="text-center">Recent Projects</h2>
+      <div class="recent-container">
+        <div class="pic">
+          <img src="./srs/Atlegang/Roof 2.jpg" class="img-fluid rounded shadow-sm" alt="">
+        </div>
+        <div class="pic">
+          <img src="./srs/Atlegang/Roof 3.jpg" class="img-fluid rounded shadow-sm" alt="">
+        </div>
+        <div class="pic">
+          <img src="./srs/Atlegang/System 1.jpg" class="img-fluid rounded shadow-sm" alt="">
+        </div>
+      </div>
+    </section>
 
-<section class="text-center my-5">
-  <h2>Why Choose Oatlegile Energy?</h2>
-  <p>✔ Affordable pricing<br>
-     ✔ Fast installation<br>
-     ✔ Gauteng-based service<br>
-     ✔ Reliable and professional team</p>
-</section>
 
-<section class="text-center my-5">
-  <h2>Recent Solar Installations</h2>
-  <img src="./srs/Atlegang/Roof 2.jpg" class="img-fluid mb-3" alt="Solar panel installation Gauteng">
-  <img src="./srs/Atlegang/Roof 3.jpg" class="img-fluid mb-3" alt="Solar panels roof Gauteng">
-  <img src="./srs/Atlegang/System 1.jpg" class="img-fluid mb-3" alt="Solar system installation South Africa">
-</section>
+    
 
-<section class="text-center my-5">
-  <h2>Get a Free Quote Today</h2>
-  <p>Contact us now and get a custom solar or backup solution for your home or business.</p>
-</section>
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/27794970648" 
+     class="position-fixed bottom-0 end-0 m-3 text-success fs-3" 
+     style="z-index: 1000;">
+     <i class="fab fa-whatsapp"></i>
+  </a>
 
-</main>
+  <!-- Footer -->
+  <footer class="text-white text-center py-3">
+    <p>&copy; 2025 Solar and Electrical @ Oatlegile. All rights reserved.</p>
+  </footer>
 
-<a href="https://wa.me/27794970648?text=Hi%20I%20need%20a%20quote"
-class="position-fixed bottom-0 end-0 m-3 btn btn-success"
-style="z-index:1000;">💬 WhatsApp</a>
-
-<footer class="text-center py-3">
-<p>&copy; 2025 Oatlegile Energy</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
